@@ -26,69 +26,193 @@
 # O sistema deve calcular o valor total da estadia para cada cliente, considerando o tipo de quarto e a quantidade de dias.
 
 print(' ---------------------- CADASTRO DE CLIENTE -------------------------')
+ atividade 2 hospedagem: 
 
-# Cadastro de até 3 clientes
-cliente1_nome = input("Digite o nome do 1º cliente: ")
-cliente1_idade = int(input("Digite a idade do 1º cliente: "))
+quartos  =  ['','simples','duplo','luxo']
+valores =  [0,100,150,250]
 
-cliente2_nome = input("Digite o nome do 2º cliente: ")
-cliente2_idade = int(input("Digite a idade do 2º cliente: "))
+pessoas = int(input('Quantas pessoas vão se hospedar: '))
 
-cliente3_nome = input("Digite o nome do 3º cliente: ")
-cliente3_idade = int(input("Digite a idade do 3º cliente: "))
+if pessoas == 1:
+    nome =  input('NOme: ')
+    idade = int(input('Idade: '))
 
-#  quartos e seus preços
-quartos = ["Simples", "Duplo", "Luxo"]
-precos = [100, 150, 250]
+    print('Olá', nome)
 
-# Cliente 1 escolhe o quarto
-cliente1_quarto = input(f"{cliente1_nome}, escolha o tipo de quarto (Simples / Duplo / Luxo): ")
-if cliente1_quarto == "Simples":
-    cliente1_preco = precos[0]
-elif cliente1_quarto == "Duplo":
-    cliente1_preco = precos[1]
-elif cliente1_quarto == "Luxo":
-    cliente1_preco = precos[2]
-else:
-    print("Opção inválida! Será considerado quarto Simples.")
-    cliente1_preco = precos[0]
+    escolha  =  int(input(f'''
+    escolha p seu quarto
 
-cliente1_dias = int(input(f"Quantos dias {cliente1_nome} ficará hospedado(a)? "))
-valor_cliente1 = cliente1_preco * cliente1_dias
+    1 - {quartos[1]} R$ {valores[1]} 
+    2 - {quartos[2]} R$ {valores[2]} 
+    3 - {quartos[3]} R$ {valores[3]} 
+    
+    '''))
+    
+    quantidade = int(input('Dias: '))
+    calculo =  valores[escolha]  *  quantidade
 
-# Cliente 2 escolhe o quarto
-cliente2_quarto = input(f"{cliente2_nome}, escolha o tipo de quarto (Simples / Duplo / Luxo): ")
-if cliente2_quarto == "Simples":
-    cliente2_preco = precos[0]
-elif cliente2_quarto == "Duplo":
-    cliente2_preco = precos[1]
-elif cliente2_quarto == "Luxo":
-    cliente2_preco = precos[2]
-else:
-    print("Opção inválida! Será considerado quarto Simples.")
-    cliente2_preco = precos[0]
+    print('R$', calculo)
+    print('Dias', quantidade)
 
-cliente2_dias = int(input(f"Quantos dias {cliente2_nome} ficará hospedado(a)? "))
-valor_cliente2 = cliente2_preco * cliente2_dias
+    formas_pag = ['', 'PIX','CC','CD']
+    pag =  int(input('Forma de pagamento: '))
+    print('forma de pagamento - ', formas_pag[pag])
+    print('Obrigada volte sempre')
 
-# Cliente 3 escolhe o quarto
-cliente3_quarto = input(f"{cliente3_nome}, escolha o tipo de quarto (Simples / Duplo / Luxo): ")
-if cliente3_quarto == "Simples":
-    cliente3_preco = precos[0]
-elif cliente3_quarto == "Duplo":
-    cliente3_preco = precos[1]
-elif cliente3_quarto == "Luxo":
-    cliente3_preco = precos[2]
-else:
-    print("Opção inválida! Será considerado quarto Simples.")
-    cliente3_preco = precos[0]
 
-cliente3_dias = int(input(f"Quantos dias {cliente3_nome} ficará hospedado(a)? "))
-valor_cliente3 = cliente3_preco * cliente3_dias
 
-# Exibição dos valores finais
-print("\n--- RESUMO DAS RESERVAS ---")
-print(f"{cliente1_nome} ({cliente1_idade} anos): R$ {valor_cliente1:.2f} ({cliente1_quarto} por {cliente1_dias} dias)")
-print(f"{cliente2_nome} ({cliente2_idade} anos): R$ {valor_cliente2:.2f} ({cliente2_quarto} por {cliente2_dias} dias)")
-print(f"{cliente3_nome} ({cliente3_idade} anos): R$ {valor_cliente3:.2f} ({cliente3_quarto} por {cliente3_dias} dias)")
+if pessoas == 2:
+    nome1 =  input('Nome: ')
+    idade1 = int(input('Idade: '))
+
+    nome2 =  input('Nome: ')
+    idade2 = int(input('Idade: '))
+
+
+    print('Olá', nome1)
+
+    escolha1  =  int(input(f'''
+    escolha p seu quarto
+
+    1 - {quartos[1]} R$ {valores[1]} 
+    2 - {quartos[2]} R$ {valores[2]} 
+    3 - {quartos[3]} R$ {valores[3]} 
+    
+    '''))
+    
+    quantidade1 = int(input('Dias: '))
+    calculo1 =  valores[escolha1]  *  quantidade1
+
+    print('R$', calculo1)
+    print('Dias', quantidade1)
+
+
+    formas_pag = ['', 'PIX','CC','CD']
+    print(formas_pag)    
+    pag =  int(input('Forma de pagamento: '))
+    print('forma de pagamento - ', formas_pag[pag])
+    print('Obrigada volte sempre')
+
+
+    print('--------------------------------')
+
+    print('Olá', nome2)
+
+    escolha2  =  int(input(f'''
+    escolha p seu quarto
+
+    1 - {quartos[1]} R$ {valores[1]} 
+    2 - {quartos[2]} R$ {valores[2]} 
+    3 - {quartos[3]} R$ {valores[3]} 
+    
+    '''))
+    
+    quantidade2 = int(input('Dias: '))
+    calculo2 =  valores[escolha2]  *  quantidade2
+
+    print('R$', calculo1)
+    print('Dias', quantidade1)
+
+
+    
+    formas_pag = ['', 'PIX','CC','CD']
+    print(formas_pag)
+    pag =  int(input('Forma de pagamento: '))
+    print('forma de pagamento - ', formas_pag[pag])
+    print('Obrigada volte sempre')
+
+    print('----------------------------------')
+
+
+elif pessoas == 3:
+    nome1 =  input('Nome: ')
+    idade1 = int(input('Idade: '))
+
+    nome2 =  input('Nome: ')
+    idade2 = int(input('Idade: '))
+
+    nome3 =  input('Nome: ')
+    idade3 = int(input('Idade: '))
+
+
+    print('Olá', nome1)
+
+    escolha1  =  int(input(f'''
+    escolha p seu quarto
+
+    1 - {quartos[1]} R$ {valores[1]} 
+    2 - {quartos[2]} R$ {valores[2]} 
+    3 - {quartos[3]} R$ {valores[3]} 
+    
+    '''))
+    
+    quantidade1 = int(input('Dias: '))
+    calculo1 =  valores[escolha1]  *  quantidade1
+
+    print('R$', calculo1)
+    print('Dias', quantidade1)
+
+    
+    formas_pag = ['', 'PIX','CC','CD']
+    print(formas_pag)
+    pag =  int(input('Forma de pagamento: '))
+    print('forma de pagamento - ', formas_pag[pag])
+    print('Obrigada volte sempre')
+
+    print('--------------------------------')
+
+    print('Olá', nome2)
+
+    escolha2  =  int(input(f'''
+    escolha p seu quarto
+
+    1 - {quartos[1]} R$ {valores[1]} 
+    2 - {quartos[2]} R$ {valores[2]} 
+    3 - {quartos[3]} R$ {valores[3]} 
+    
+    '''))
+    
+    quantidade2 = int(input('Dias: '))
+    calculo2 =  valores[escolha2]  *  quantidade2
+
+    print('R$', calculo1)
+    print('Dias', quantidade1)
+
+
+    formas_pag = ['', 'PIX','CC','CD']
+    print(formas_pag)
+    pag =  int(input('Forma de pagamento: '))
+    print('forma de pagamento - ', formas_pag[pag])
+    print('Obrigada volte sempre')
+
+
+    print('--------------------------------')
+
+    print('Olá', nome3)
+
+    escolha3  =  int(input(f'''
+    escolha p seu quarto
+
+    1 - {quartos[1]} R$ {valores[1]} 
+    2 - {quartos[2]} R$ {valores[2]} 
+    3 - {quartos[3]} R$ {valores[3]} 
+    
+    '''))
+    
+    quantidade3 = int(input('Dias: '))
+    calculo3 =  valores[escolha3]  *  quantidade3
+
+    print('R$', calculo3)
+    print('Dias', quantidade3)
+
+    
+    formas_pag = ['', 'PIX','CC','CD']
+    print(formas_pag)
+    pag =  int(input('Forma de pagamento: '))
+    print('forma de pagamento - ', formas_pag[pag])
+    print('Obrigada volte sempre')
+
+    print('----------------------------------')
+
+
 
