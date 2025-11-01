@@ -91,3 +91,4 @@ print("\n--- RESUMO DAS RESERVAS ---")
 print(f"{cliente1_nome} ({cliente1_idade} anos): R$ {valor_cliente1:.2f} ({cliente1_quarto} por {cliente1_dias} dias)")
 print(f"{cliente2_nome} ({cliente2_idade} anos): R$ {valor_cliente2:.2f} ({cliente2_quarto} por {cliente2_dias} dias)")
 print(f"{cliente3_nome} ({cliente3_idade} anos): R$ {valor_cliente3:.2f} ({cliente3_quarto} por {cliente3_dias} dias)")
+
